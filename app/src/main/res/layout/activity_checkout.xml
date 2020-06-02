@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Checkout">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:onClick="goBack"
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/back_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:text="Summary"
+                android:textColor="#00372A"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/button_green">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="24dp"
+                    android:fontFamily="@font/josefin_sans"
+                    android:text="Plan"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_gravity="end"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="200dp"
+                    android:fontFamily="@font/josefin_sans"
+                    android:text="Amount"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="24dp"
+                    android:textFontWeight="600"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:text="Messaging"/>
+
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="160dp"
+                    android:textFontWeight="600"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:text="$60/mo"/>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="24dp"
+                android:background="@drawable/bkg_spinner"
+                android:src="@drawable/delete"/>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="#00372A"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp"
+            android:textFontWeight="500"
+            android:textAllCaps="true"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:text="Card details"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="#909090"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:text="Enter your card details"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/card_number"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Card Number"
+            android:inputType="number"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            android:layout_marginTop="20dp"
+            app:hintTextColor="#909090"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textColorHint="#909090"
+            app:boxStrokeColor="#14B08B">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/card_holder"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Card Holder Name"
+            android:inputType="number"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            android:layout_marginTop="20dp"
+            app:hintTextColor="#909090"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textColorHint="#909090"
+            app:boxStrokeColor="#14B08B">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/expiryDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:hint="Expiry Date"
+                android:inputType="number"
+                app:hintAnimationEnabled="true"
+                app:hintEnabled="true"
+                app:hintTextColor="#909090"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textColorHint="#909090"
+                app:boxStrokeColor="#14B08B">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cvv"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:hint="CVV"
+                android:inputType="numberPassword"
+                app:hintAnimationEnabled="true"
+                app:hintEnabled="true"
+                android:layout_marginLeft="15dp"
+                app:hintTextColor="#909090"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:textColorHint="#909090"
+                app:boxStrokeColor="#14B08B">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:background="@drawable/button_green"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

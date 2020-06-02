@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/content_bottom_sheet"
+    android:layout_height="500dp"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="70dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <TextView
+        android:id="@+id/bottomSheetHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Join Nguvu"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:textColor="#00372A"
+        android:layout_gravity="start"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <Button
+        android:onClick="openUser"
+        android:id="@+id/user"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#33F9A825"
+        android:text="User"
+        android:layout_marginTop="20dp"
+        android:textColor="#00372A"
+        android:textSize="20sp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/bottomSheetOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:textColor="#909090"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <Button
+        android:onClick="openTherapist"
+        android:id="@+id/therapist"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#3314B08B"
+        android:text="Therapist"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#00372A"
+        android:textSize="20sp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:textAllCaps="false"/>
+
+</LinearLayout>
